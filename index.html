@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- [解説] 検索エンジン（Googleなど）の検索結果に表示させないための設定（リンクを知っている人だけが見れる状態） -->
+    <meta name="robots" content="noindex, nofollow">
+    <title>Webサイト構造と役割学習デモ | 新卒研修用</title>
+    <!-- [解説] 見た目（デザイン・レイアウト）をつかさどるCSSファイルを外部から読み込みます -->
+    <link rel="stylesheet" href="style.css" id="main-style">
+</head>
+
+<body>
+
+    <!-- レスポンシブ・インジケーター -->
+    <div id="responsive-indicator">💻 PCモード</div>
+
+    <!-- [解説] 研修用コントロールパネル -->
+    <!-- HTML・CSS・JSそれぞれの役割を体感してもらうための特別なエリアです -->
+    <div class="control-panel">
+        <p><strong>【HTML / CSS / JS の役割がわかるコントロールパネル】</strong></p>
+        <button id="toggleCssBtn" class="control-btn css-btn" data-css-spec="CSS設定：丸み30px / 色#FF8E8B">👗
+            CSSを脱がせる（無効化）</button>
+        <button id="killJsBtn" class="control-btn js-btn" data-css-spec="CSS設定：丸み30px / 色#EAC966">💤
+            JSを眠らせる（停止）</button>
+        <p class="panel-desc">
+            ☝️ まずは「CSSを脱がせる」ことで、HTMLが「情報の『意味』を決める設計図」だけになる状態を確認してみましょう。<br>
+            ✌️ そして「JSを眠らせる」ことで、「サイトの筋肉・魔法」が止まり機能しなくなる状態を体感してください。
+        </p>
+    </div>
+
+    <!-- [解説] サイトのヘッダー：ロゴやナビゲーションメニューを配置する <header> タグ -->
+    <header class="component" data-tag="ここは <header> (案内所) です">
+        <div class="header-inner">
+            <div class="logo">
+                <span class="img-wrapper" data-tag="ここは <img> (画像) です"><img src="images/logo.png" alt="YourLogo" class="logo-img"></span>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">研修ホーム</a></li>
+                    <li><a href="lesson1.html">第1章: Webの基礎</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- [解説] ページの主要なコンテンツを囲む <main> タグ -->
+        <main class="component main-content" data-tag="ここは <main> です">
+
+            <!-- [解説] 意味的なまとまりを示す <section> タグ（メインビジュアル部分） -->
+            <section class="component" data-tag="ここは <section> (メインビジュアル：サイトの顔) です">
+                <div class="main-visual">
+                    <span class="img-wrapper" data-tag="ここは <img> (画像) です"><img src="images/img01.avif" alt="Main Visual" class="main-visual-img"></span>
+                    <h1>新卒フロントエンド基礎研修</h1>
+                    <p class="intro-description">
+                        ここからWebの世界の第一歩が始まります。<br>
+                        <strong>HTML ── 「サイトの骨組み（中身）」</strong>: 情報の『意味』を決める設計図。<br>
+                        <strong>CSS ── 「サイトのメイク・お着替え（見た目）」</strong>: 色や形を整えて世界観を作る魔法。<br>
+                        <strong>JavaScript ── 「サイトの筋肉・魔法（動き）」</strong>: 計算したり表示を変えたり、命を吹き込む役割。
+                    </p>
+                </div>
+            </section>
+
+            <!-- [解説] JSの機能を学ぶデモセクション -->
+            <section class="component js-demo-section" data-tag="ここは <section> (命を吹き込む役割) です">
+                <h2>JavaScriptの役割（動き・計算）</h2>
+                <p>CSSは「見た目」を変えますが、JavaScriptは「データを使って計算したり、表示を動的に書き換えたり」することができます。下のボタンを押して、どう変化するか確認してください。</p>
+
+                <div class="card js-demo-controls" data-css-spec="CSS設定：丸み30px / 影付き">
+                    <button id="showTimeBtn" class="action-btn"
+                        data-css-spec="CSS設定：丸み30px / 色#9DB5A4">現在時刻を表示する</button>
+                    <button id="changeColorBtn" class="action-btn"
+                        data-css-spec="CSS設定：丸み30px / 色#9DB5A4">ランダムな色を生成する</button>
+                </div>
+
+                <!-- JSによって書き換えられる結果表示用の箱 -->
+                <div id="jsOutputBox" class="js-output-box">
+                    ここにJavaScriptの結果が表示されます。
+                </div>
+            </section>
+
+            <!-- [解説] 別のまとまりを示す <section> タグ（コンテンツエリア部分） -->
+            <section class="component" data-tag="ここは <section> (コンテンツエリア) です">
+                <h2>学習ステップ (3カラムレイアウト)</h2>
+                <div class="card-container">
+                    <div class="card" data-css-spec="CSS設定：丸み30px / オフホワイト背景">
+                        <span class="img-wrapper" data-tag="ここは <img> (画像) です"><img src="images/img02.avif" alt="HTML" class="card-img"></span>
+                        <h3>STEP 1: HTMLの枠組み</h3>
+                        <p>まずは家づくりでいう「骨組み」を作ります。ここでは文章や画像など「意味のある情報」を配置します。</p>
+                    </div>
+                    <div class="card" data-css-spec="CSS設定：丸み30px / オフホワイト背景">
+                        <span class="img-wrapper" data-tag="ここは <img> (画像) です"><img src="images/img03.avif" alt="CSS" class="card-img"></span>
+                        <h3>STEP 2: CSSの装飾</h3>
+                        <p>次にCSSで「内装や外装」を施します。レイアウトを整え、Flexboxを使って綺麗に横並びにする魔法をかけます。</p>
+                    </div>
+                    <div class="card" data-css-spec="CSS設定：丸み30px / オフホワイト背景">
+                        <span class="img-wrapper" data-tag="ここは <img> (画像) です"><img src="images/img04.avif" alt="JS" class="card-img"></span>
+                        <h3>STEP 3: JSの魔法</h3>
+                        <p>最後にJSを使って動くボタンや計算機能をつけ、「住める家」として命を吹き込みます。</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- [解説] メインコンテンツの補足情報（広告やカテゴリ一覧など）を配置する <aside> タグ -->
+        <aside class="component sidebar" data-tag="ここは <aside> (役立つ小窓) です">
+            <div class="sidebar-widget" data-css-spec="CSS設定：丸み30px / 影付き">
+                <h3>本日のカリキュラム</h3>
+                <ul>
+                    <li><a href="lesson1.html">第1章: Webの基礎</a></li>
+                    <li><span style="color:#ccc;">第2章: デザイン (準備中)</span></li>
+                    <li><span style="color:#ccc;">第3章: 動き (準備中)</span></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget" data-css-spec="CSS設定：丸み30px / 影付き">
+                <h3>ブルーロック参考サイトへ飛ぶ</h3>
+                <a href="https://erd-goofy-52503106.figma.site/" target="_blank">
+                    <span class="img-wrapper" data-tag="ここは <img> (画像) です"><img src="images/advertisement.jpg" alt="Reference Link" class="ad-img"></span>
+                </a>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- [解説] サイトの最下部（コピーライトや補足リンクなど）を配置する <footer> タグ -->
+    <footer class="component" data-tag="ここは <footer> (お見送り窓口) です">
+        <div class="footer-inner">
+            <div class="sns-icons">
+                <span class="sns-dummy"></span>
+                <span class="sns-dummy"></span>
+                <span class="sns-dummy"></span>
+            </div>
+            <p>&copy; 2026 Web Structure Demo. 新人研修プロジェクト All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- レントゲン・モードのフロートボタンスイッチ -->
+    <button id="toggleXrayBtn" class="float-btn" data-css-spec="CSS設定：丸み30px / コーラルピンク">🦴 レントゲン</button>
+
+    <!-- [解説] 振る舞いや機能をつかさどるJavaScriptファイルを外部から読み込みます -->
+    <!-- ※bodyタグの最後に記述することで、HTMLがすべて表示されてからJSが読み込まれ、表示が早くなります -->
+    <script src="script.js"></script>
+</body>
+
+</html>
