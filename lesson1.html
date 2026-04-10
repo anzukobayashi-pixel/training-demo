@@ -7,15 +7,7 @@
     <!-- [解説] 検索エンジン（Googleなど）の検索結果に表示させないための設定（リンクを知っている人だけが見れる状態） -->
     <meta name="robots" content="noindex, nofollow">
 
-    <!-- 簡易パスワード保護 -->
-    <script>
-        const pass = prompt("サイトを閲覧するためのパスワードを入力してください。（ヒント: demo2026）");
-        if (pass !== "demo2026") {
-            document.documentElement.style.display = 'none';
-            alert("パスワードが違います。ページを再読み込みしてください。");
-            window.location.href = "about:blank"; // 白紙ページに飛ばす
-        }
-    </script>
+
 
     <title>第1章: Webの基礎 | 新卒研修用</title>
     <!-- [解説] 見た目（デザイン・レイアウト）をつかさどるCSSファイルを外部から読み込みます -->
