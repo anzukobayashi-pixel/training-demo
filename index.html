@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- [解説] 検索エンジン（Googleなど）の検索結果に表示させないための設定（リンクを知っている人だけが見れる状態） -->
     <meta name="robots" content="noindex, nofollow">
-    
+
     <!-- 簡易パスワード保護 -->
     <script>
-        const pass = prompt("サイトを閲覧するためのパスワードを入力してください。（ヒント: demo2026）");
+        const pass = prompt("サイトを閲覧するためのパスワードを入力してください。");
         if (pass !== "demo2026") {
             document.documentElement.style.display = 'none';
             alert("パスワードが違います。ページを再読み込みしてください。");
@@ -45,7 +45,8 @@
     <header class="component" data-tag="ここは <header> (案内所) です">
         <div class="header-inner">
             <div class="logo">
-                <span class="img-wrapper" data-tag="ここは <img> (画像) です"><img src="images/logo.png" alt="YourLogo" class="logo-img"></span>
+                <span class="img-wrapper" data-tag="ここは <img> (画像) です"><img src="images/logo.png" alt="YourLogo"
+                        class="logo-img"></span>
             </div>
             <nav>
                 <ul class="nav-menu">
@@ -64,7 +65,8 @@
             <!-- [解説] 意味的なまとまりを示す <section> タグ（メインビジュアル部分） -->
             <section class="component" data-tag="ここは <section> (メインビジュアル：サイトの顔) です">
                 <div class="main-visual">
-                    <span class="img-wrapper" data-tag="ここは <img> (画像) です"><img src="images/img01.avif" alt="Main Visual" class="main-visual-img"></span>
+                    <span class="img-wrapper" data-tag="ここは <img> (画像) です"><img src="images/img01.avif"
+                            alt="Main Visual" class="main-visual-img"></span>
                     <h1>新卒フロントエンド基礎研修</h1>
                     <p class="intro-description">
                         ここからWebの世界の第一歩が始まります。<br>
@@ -98,17 +100,20 @@
                 <h2>学習ステップ (3カラムレイアウト)</h2>
                 <div class="card-container">
                     <div class="card" data-css-spec="CSS設定：丸み30px / オフホワイト背景">
-                        <span class="img-wrapper" data-tag="ここは <img> (画像) です"><img src="images/img02.avif" alt="HTML" class="card-img"></span>
+                        <span class="img-wrapper" data-tag="ここは <img> (画像) です"><img src="images/img02.avif" alt="HTML"
+                                class="card-img"></span>
                         <h3>STEP 1: HTMLの枠組み</h3>
                         <p>まずは家づくりでいう「骨組み」を作ります。ここでは文章や画像など「意味のある情報」を配置します。</p>
                     </div>
                     <div class="card" data-css-spec="CSS設定：丸み30px / オフホワイト背景">
-                        <span class="img-wrapper" data-tag="ここは <img> (画像) です"><img src="images/img03.avif" alt="CSS" class="card-img"></span>
+                        <span class="img-wrapper" data-tag="ここは <img> (画像) です"><img src="images/img03.avif" alt="CSS"
+                                class="card-img"></span>
                         <h3>STEP 2: CSSの装飾</h3>
                         <p>次にCSSで「内装や外装」を施します。レイアウトを整え、Flexboxを使って綺麗に横並びにする魔法をかけます。</p>
                     </div>
                     <div class="card" data-css-spec="CSS設定：丸み30px / オフホワイト背景">
-                        <span class="img-wrapper" data-tag="ここは <img> (画像) です"><img src="images/img04.avif" alt="JS" class="card-img"></span>
+                        <span class="img-wrapper" data-tag="ここは <img> (画像) です"><img src="images/img04.avif" alt="JS"
+                                class="card-img"></span>
                         <h3>STEP 3: JSの魔法</h3>
                         <p>最後にJSを使って動くボタンや計算機能をつけ、「住める家」として命を吹き込みます。</p>
                     </div>
@@ -130,7 +135,8 @@
             <div class="sidebar-widget" data-css-spec="CSS設定：丸み30px / 影付き">
                 <h3>ブルーロック参考サイトへ飛ぶ</h3>
                 <a href="https://erd-goofy-52503106.figma.site/" target="_blank">
-                    <span class="img-wrapper" data-tag="ここは <img> (画像) です"><img src="images/advertisement.jpg" alt="Reference Link" class="ad-img"></span>
+                    <span class="img-wrapper" data-tag="ここは <img> (画像) です"><img src="images/advertisement.jpg"
+                            alt="Reference Link" class="ad-img"></span>
                 </a>
             </div>
         </aside>

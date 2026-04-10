@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- [解説] 検索エンジン（Googleなど）の検索結果に表示させないための設定（リンクを知っている人だけが見れる状態） -->
     <meta name="robots" content="noindex, nofollow">
-    
+
     <!-- 簡易パスワード保護 -->
     <script>
         const pass = prompt("サイトを閲覧するためのパスワードを入力してください。（ヒント: demo2026）");
@@ -20,12 +21,15 @@
     <!-- [解説] 見た目（デザイン・レイアウト）をつかさどるCSSファイルを外部から読み込みます -->
     <link rel="stylesheet" href="style.css" id="main-style">
 </head>
+
 <body>
     <div id="responsive-indicator">💻 PCモード</div>
     <div class="control-panel">
         <p><strong>【HTML / CSS / JS の役割がわかるコントロールパネル】</strong></p>
-        <button id="toggleCssBtn" class="control-btn css-btn" data-css-spec="CSS設定：丸み30px / 色#FF8E8B">👗 CSSを脱がせる（無効化）</button>
-        <button id="killJsBtn" class="control-btn js-btn" data-css-spec="CSS設定：丸み30px / 色#EAC966">💤 JSを眠らせる（停止）</button>
+        <button id="toggleCssBtn" class="control-btn css-btn" data-css-spec="CSS設定：丸み30px / 色#FF8E8B">👗
+            CSSを脱がせる（無効化）</button>
+        <button id="killJsBtn" class="control-btn js-btn" data-css-spec="CSS設定：丸み30px / 色#EAC966">💤
+            JSを眠らせる（停止）</button>
         <p class="panel-desc">
             同じCSSファイルやJSファイルを読み込んでいるので、ページが変わってもデザイン・機能がそのまま使えます！
         </p>
@@ -34,7 +38,8 @@
     <header class="component" data-tag="ここは <header> (案内所) です">
         <div class="header-inner">
             <div class="logo">
-                <span class="img-wrapper" data-tag="ここは <img> (画像) です"><img src="images/logo.png" alt="YourLogo" class="logo-img"></span>
+                <span class="img-wrapper" data-tag="ここは <img> (画像) です"><img src="images/logo.png" alt="YourLogo"
+                        class="logo-img"></span>
             </div>
             <nav>
                 <ul class="nav-menu">
@@ -48,28 +53,31 @@
     <div class="container">
         <main class="component main-content" data-tag="ここは <main> です">
             <section class="component" data-tag="ここは <section> (学習コンテンツ) です">
-                <div class="lesson-content" style="background:#fff; padding:40px; border-radius:30px; box-shadow:0 8px 20px rgba(0,0,0,0.04);">
-                    <h2 style="border-bottom: 2px dashed #FF8E8B; padding-bottom: 15px; margin-bottom: 30px;">第1回：HTMLの役割と構造</h2>
-                    
+                <div class="lesson-content"
+                    style="background:#fff; padding:40px; border-radius:30px; box-shadow:0 8px 20px rgba(0,0,0,0.04);">
+                    <h2 style="border-bottom: 2px dashed #FF8E8B; padding-bottom: 15px; margin-bottom: 30px;">
+                        第1回：HTMLの役割と構造</h2>
+
                     <h3>1. Webページは「情報の箱」の集まり</h3>
                     <p style="line-height:1.8; margin-bottom:20px;">
                         Webサイトは1枚の絵のように見えますが、実は小さな「情報の箱（HTMLタグ）」がいくつも組み合わさってできています。<br>
                         たとえば、今皆さんが見ているこの文章も <code>&lt;p&gt;</code> という箱に入っています。
                     </p>
-                    
+
                     <div style="background:#F9F7F2; padding:20px; border-radius:15px; margin-bottom: 30px;">
                         <h4 style="margin-top:0;">💡 やってみよう</h4>
                         <p>画面右下の「🦴 レントゲン」ボタンを押してみてください。<br>
-                        透明になって赤い枠線が見えるでしょうか？それがHTMLが作り出している「箱」の正体です。</p>
+                            透明になって赤い枠線が見えるでしょうか？それがHTMLが作り出している「箱」の正体です。</p>
                     </div>
 
                     <div style="text-align:center; margin-top: 40px;">
-                        <a href="index.html" class="action-btn" style="display:inline-block; text-decoration:none;">研修ホームへ戻る</a>
+                        <a href="index.html" class="action-btn"
+                            style="display:inline-block; text-decoration:none;">研修ホームへ戻る</a>
                     </div>
                 </div>
             </section>
         </main>
-        
+
         <aside class="component sidebar" data-tag="ここは <aside> (役立つ小窓) です">
             <div class="sidebar-widget" data-css-spec="CSS設定：丸み30px / 影付き">
                 <h3>カテゴリー一覧</h3>
@@ -95,4 +103,5 @@
     <button id="toggleXrayBtn" class="float-btn" data-css-spec="CSS設定：丸み30px / コーラルピンク">🦴 レントゲン</button>
     <script src="script.js"></script>
 </body>
+
 </html>
